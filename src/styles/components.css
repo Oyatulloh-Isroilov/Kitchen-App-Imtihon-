@@ -1,0 +1,523 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+}
+
+.createAccInps {
+  display: flex;
+  flex-direction: column;
+}
+
+.createAccInps input {
+  padding: 10px 20px;
+  border: 1.5px solid rgb(101, 38, 255);
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.bgVideo {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -100000;
+  object-fit: cover;
+}
+
+.signupBar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 305px;
+}
+
+.signupButtons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  row-gap: 18px;
+}
+
+.signupButtons button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.signupText {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 41px;
+  margin-top: 160px;
+}
+
+.signupBtn {
+  outline: none;
+  border: none;
+  background: rgb(74, 0, 255);
+  background-image: url(../assets/images/signupBtn.avif);
+}
+
+.signupGoogleBtn {
+  display: flex;
+  gap: 5px;
+  width: 300px;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background-image: url(../assets//images//googleBtn.png);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.loginAccInps {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginAccInps input {
+  padding: 10px 20px;
+  border: 1.5px solid rgb(101, 38, 255);
+  border-radius: 8px;
+  outline: none;
+}
+
+.bgVideo {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -100000;
+  object-fit: cover;
+}
+
+.loginBar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 305px;
+}
+
+.loginButtons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  row-gap: 18px;
+}
+
+.loginButtons button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.loginText {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 41px;
+  margin-top: 160px;
+}
+
+.loginpBtn {
+  outline: none;
+  border: none;
+  background: rgb(74, 0, 255);
+  background-image: url(../assets/images/signupBtn.avif);
+}
+
+.loginGoogleBtn {
+  display: flex;
+  outline: none;
+  border: none;
+  gap: 5px;
+  background-image: url(../assets/images/googleBtn.png);
+  width: 300px;
+  justify-content: center;
+}
+
+.loginButtons a,
+.signupButtons a {
+  border-radius: 10px;
+  padding: 14px 24px;
+  text-decoration: none;
+  background-image: url(../assets/images/accountHaveBtn.jpg);
+  color: #fff;
+  text-align: center;
+}
+
+.home {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+  border-bottom: 1px solid rgb(229, 230, 230);
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.headerAccount {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.headerAccount span {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.headerAccount img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.hero {
+  margin-top: 40px;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 45px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  gap: 20px;
+  background: rgb(229, 230, 230);
+}
+
+.footer p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipeText {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 365px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card .productImg {
+  width: 320px;
+  height: 175px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.cardInfo {
+  padding: 0px 15px 0px 17px;
+}
+
+.cardInfo h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.cardInfo .productDesc {
+  width: 300px;
+  height: 33px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.2em;
+  height: 3.6em; 
+  font-size: 19px;
+}
+
+.cardInfo span {
+  display: flex;
+  font-size: 16px;
+  background: rgb(180, 142, 173);
+  padding: 3px 4.5px;
+  width: 98px;
+  white-space-collapse: collapse;
+  border-radius: 10px;
+  font-size: 13px;
+  z-index: 10000;
+}
+
+.productMinBar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  bottom: -600%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1000;
+  width: 208px;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown ul li:hover {
+  transition: all 0.3s ease;
+  color: #fff;
+  background-color: rgb(43, 52, 64);
+}
+
+.productMinBar .newLabel {
+  color: #000;
+  background: rgb(129, 161, 193);
+  font-size: 15px;
+  text-align: center;
+}
+
+.recipeCreate {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipeCreate input {
+  padding: 15px 28px;
+  width: 495px;
+  border: 1px solid rgb(225, 226, 228);
+  border-radius: 14px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.recipeCreate label {
+  margin-bottom: 5px;
+}
+
+.recipeCreate .addBtn {
+  padding: 15px 45px;
+  border-radius: 15px;
+  margin-left: 10px;
+  background: rgb(0, 215, 192);
+  outline: none;
+  border: none;
+}
+
+.recipeCreate textarea {
+  width: 610px;
+  height: 100px;
+  border-radius: 15px;
+  border: 1px solid rgb(225, 226, 228);
+  padding: 10px 15px;
+}
+
+.recipeCreate .allIngredients {
+  display: flex;
+  gap: 10px;
+}
+
+.recipeCreate .allImgs {
+  display: flex;
+  gap: 10px;
+}
+
+.recipeCreate img {
+  width: 120px;
+  height: 80px;
+}
+
+.recipeTitleBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipteTime {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipteIngredetuions {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipteImages {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipteMethod {
+  display: flex;
+  flex-direction: column;
+}
+
+.errorTexts {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.errorTexts .errorYet {
+  border-radius: 20px;
+  padding: 2px 4px;
+  border: 1px solid #000;
+}
+
+.addRecipeText {
+  display: flex;
+  justify-content: center;
+  margin-top: 61px;
+  margin-bottom: 50px;
+}
+
+.recipeElementImg {
+  width: 330px;
+  height: 220px;
+}
+
+.recipeDetail {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detailRecipeImgs h3 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.detailImg {
+  display: flex;
+  gap: 15px;
+  background: rgb(76, 86, 106);
+  padding: 6px 10px 6px 17px;
+}
+
+.detailTitle {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.detailIngrediens {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.detailIngrediens span {
+  margin-right: 7px;
+}
+
+.detailIngredientsUl {
+  gap: 10px;
+  display: flex;
+}
+
+.detailIngrediens ul li {
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: rgb(76, 86, 106);
+}
+
+.detailCookingTime {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.detailCookingTime span {
+  margin-right: 10px;
+}
+
+.detailMethod h3{
+  margin-bottom: 10px;
+}
+
+.detailMethod p {
+  font-size: 19px;
+}
+
+.detailBackBtn {
+  display: flex;
+  padding: 12px 15px;
+  background: rgb(129, 161, 193);
+  outline: none;
+  font-weight: bolder;
+  border: none;
+  margin-left: auto;
+  border-radius: 7px;
+}
