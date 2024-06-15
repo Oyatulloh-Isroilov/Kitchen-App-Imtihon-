@@ -37,6 +37,10 @@ button {
   width: 305px;
 }
 
+.loginBtn {
+  background-image: url(../assets/images/signupBtn.avif);
+}
+
 .signupButtons {
   display: flex;
   flex-direction: column;
@@ -304,9 +308,13 @@ button {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
   cursor: pointer;
+  padding: 4px;
+  border-radius: 30px;
+  background: rgb(202, 204, 212);
 }
 
 .dropdown {
@@ -455,6 +463,40 @@ button {
   margin-right: auto;
 }
 
+.recipeCreate h2 {
+  text-align: center;
+}
+
+.recipeTitleBar {
+  margin-top: 20px;
+}
+
+.recipeTime {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeIngredients {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.recipeIngredients span {
+  display: flex;
+}
+
+.recipeIngredients span ul {
+  display: flex;
+  margin-left: 5px;
+  gap: 10px;
+}
+
+.recipeTime {
+  display: flex;
+  flex-direction: column;
+}
+
 .detailRecipeImgs h3 {
   margin-top: 50px;
   margin-bottom: 25px;
@@ -465,6 +507,8 @@ button {
   gap: 15px;
   background: rgb(76, 86, 106);
   padding: 6px 10px 6px 17px;
+  width: auto;
+  justify-content: flex-start;
 }
 
 .detailTitle {
@@ -520,4 +564,75 @@ button {
   border: none;
   margin-left: auto;
   border-radius: 7px;
+}
+
+
+.recipeImages span {
+  display: flex;
+  align-items: center;
+}
+
+.recipeImages span ul {
+  display: flex;
+  margin-left: 5px;
+  gap: 10px;
+}
+
+.recipeImages span ul li img {
+  width: 140px;
+  height: 80px;
+}
+
+.errorYet {
+  margin-left: 5px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  padding: 1px 3px;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 20px 25px;
+  background: rgb(0, 215, 192);
+}
+
+.recipeMethod {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeMethod textarea {
+  display: flex;
+  width: 605px;
+  height: 120px;
+  outline: none;
+  border: 1px solid rgb(225, 226, 228);
+}
+
+.recImgText {
+  margin-bottom: 20px;
+}
+
+.createRecipeBtns {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  width: 605px;
+  margin-bottom: 100px;
+}
+
+.createRecipeBtns button {
+  width: 50%;
+  padding: 15px 25px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+}
+
+.createRecipeBtns .recipeBtnApply{
+  background: rgb(0, 181, 255);
+}
+
+.createRecipeBtns .recipeBtnPreviwe{
+  background: rgb(0, 169, 110);
 }

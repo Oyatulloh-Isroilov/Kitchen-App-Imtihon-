@@ -35,7 +35,7 @@ function CreateRecipe({ addRecipe }) {
             setError('Please fill all fields and add at least one ingredient and one image.');
             return;
         }
-        
+
         const newRecipe = {
             id: uuidv4(),
             title,
@@ -56,6 +56,7 @@ function CreateRecipe({ addRecipe }) {
 
     return (
         <div className="recipeCreate">
+            <h2>Add New Recipe</h2>
             <div className="recipeTitleBar">
                 <label htmlFor="recipeTitle">Title:</label>
                 <input
@@ -78,16 +79,18 @@ function CreateRecipe({ addRecipe }) {
             </div>
             <div className="recipeIngredients">
                 <label htmlFor="ingredients">Ingredients:</label>
-                <input
-                    type="text"
-                    id="ingredientInput"
-                    placeholder='Enter ingredients of meal'
-                    value={ingredientInput}
-                    onChange={(e) => setIngredientInput(e.target.value)}
-                />
-                <button onClick={handleAddIngredient}>+</button>
-                <span>Ingredients: 
-                    {ingredients.length === 0 ? <p>No ingredients yet</p> : (
+                <div className="ingInpBtn">
+                    <input
+                        type="text"
+                        id="ingredientInput"
+                        placeholder='Enter ingredients of meal'
+                        value={ingredientInput}
+                        onChange={(e) => setIngredientInput(e.target.value)}
+                    />
+                    <button className='addBtn' onClick={handleAddIngredient}>+</button>
+                </div>
+                <span>Ingredients:
+                    {ingredients.length === 0 ? <span className='errorYet'> ! No ingredients yet</span> : (
                         <ul>
                             {ingredients.map((ingredient, index) => (
                                 <li key={index}>{ingredient}</li>
@@ -98,16 +101,18 @@ function CreateRecipe({ addRecipe }) {
             </div>
             <div className="recipeImages">
                 <label htmlFor="images">Image URL:</label>
-                <input
-                    type="text"
-                    id="imageInput"
-                    placeholder='Enter image URL'
-                    value={imageInput}
-                    onChange={(e) => setImageInput(e.target.value)}
-                />
-                <button onClick={handleAddImage}>+</button>
-                <span>Images: 
-                    {images.length === 0 ? <p>No images yet</p> : (
+                <div className="imgInpBtn">
+                    <input
+                        type="text"
+                        id="imageInput"
+                        placeholder='Enter image URL'
+                        value={imageInput}
+                        onChange={(e) => setImageInput(e.target.value)}
+                    />
+                    <button className='addBtn' onClick={handleAddImage}>+</button>
+                </div>
+                <span className='recImgText'>Images:
+                    {images.length === 0 ? <span className='errorYet'> ! No images yet</span> : (
                         <ul>
                             {images.map((image, index) => (
                                 <li key={index}><img src={image} alt={`Recipe ${index + 1}`} /></li>
@@ -127,8 +132,10 @@ function CreateRecipe({ addRecipe }) {
                 ></textarea>
             </div>
             {error && <p className="error">{error}</p>}
-            <button onClick={handleSave}>Apply</button>
-            <button onClick={handlePreview}>Preview</button>
+            <div className="createRecipeBtns">
+                <button className='recipeBtnApply' onClick={handleSave}>Apply</button>
+                <button className='recipeBtnPreviwe' onClick={handlePreview}>Preview</button>
+            </div>
         </div>
     );
 }
