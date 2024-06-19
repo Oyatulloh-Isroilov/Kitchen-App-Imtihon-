@@ -8,6 +8,7 @@ function CreateRecipe({ addRecipe }) {
     const [cookingTime, setCookingTime] = useState('');
     const [ingredients, setIngredients] = useState([]);
     const [ingredientInput, setIngredientInput] = useState('');
+    const [ingredientCost, setIngredientCost] = useState('');
     const [images, setImages] = useState([]);
     const [imageInput, setImageInput] = useState('');
     const [method, setMethod] = useState('');
@@ -15,9 +16,10 @@ function CreateRecipe({ addRecipe }) {
     const navigate = useNavigate();
 
     const handleAddIngredient = () => {
-        if (ingredientInput) {
-            setIngredients([...ingredients, ingredientInput]);
+        if (ingredientInput && ingredientCost) {
+            setIngredients([...ingredients, { name: ingredientInput, cost: parseFloat(ingredientCost) }]);
             setIngredientInput('');
+            setIngredientCost('');
         }
     };
 
@@ -31,8 +33,8 @@ function CreateRecipe({ addRecipe }) {
     };
 
     const handleSave = () => {
-        if (!title || !cookingTime || !method || ingredients.length === 0 || images.length === 0) {
-            setError('Please fill all fields and add at least one ingredient and one image.');
+        if (!title || !cookingTime || !method || ingredients.length === 0 || images.length === 0 || !protein || !fat || !carbohydrates) {
+            setError('Please fill all fields and add at least one ingredient, one image, and nutrient information.');
             return;
         }
 
@@ -43,6 +45,11 @@ function CreateRecipe({ addRecipe }) {
             description: method,
             ingredients,
             images,
+            nutrients: {
+                protein: parseFloat(protein),
+                fat: parseFloat(fat),
+                carbohydrates: parseFloat(carbohydrates),
+            },
             createdTime: new Date().toISOString()
         };
 
@@ -51,7 +58,7 @@ function CreateRecipe({ addRecipe }) {
     };
 
     const handlePreview = () => {
-        navigate('/preview', { state: { images } });
+        navigate('/preview', { state: { images, ingredients, nutrients: { protein, fat, carbohydrates } } });
     };
 
     return (
@@ -83,7 +90,7 @@ function CreateRecipe({ addRecipe }) {
                     <input
                         type="text"
                         id="ingredientInput"
-                        placeholder='Enter ingredients of meal'
+                        placeholder='Enter ingredient name'
                         value={ingredientInput}
                         onChange={(e) => setIngredientInput(e.target.value)}
                     />
@@ -93,7 +100,7 @@ function CreateRecipe({ addRecipe }) {
                     {ingredients.length === 0 ? <span className='errorYet'> ! No ingredients yet</span> : (
                         <ul>
                             {ingredients.map((ingredient, index) => (
-                                <li key={index}>{ingredient}</li>
+                                <li key={index}>{ingredient.name} - ${ingredient.cost.toFixed(2)}</li>
                             ))}
                         </ul>
                     )}
@@ -134,7 +141,7 @@ function CreateRecipe({ addRecipe }) {
             {error && <p className="error">{error}</p>}
             <div className="createRecipeBtns">
                 <button className='recipeBtnApply' onClick={handleSave}>Apply</button>
-                <button className='recipeBtnPreviwe' onClick={handlePreview}>Preview</button>
+                <button className='recipeBtnPreview' onClick={handlePreview}>Preview</button>
             </div>
         </div>
     );

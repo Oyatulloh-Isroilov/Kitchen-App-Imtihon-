@@ -636,3 +636,18 @@ button {
 .createRecipeBtns .recipeBtnPreviwe{
   background: rgb(0, 169, 110);
 }
+
+.chartBar {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tspan {
+  font-size: 20px;
+}
+
+.themeToggle {
+  outline: none;
+  border: none;
+}

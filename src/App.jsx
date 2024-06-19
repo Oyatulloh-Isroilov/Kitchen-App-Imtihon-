@@ -6,6 +6,7 @@ import Home from './components/Home';
 import CreateRecipe from './components/CreateRecipe';
 import RecipeDetail from './components/RecipeDetail';
 import RecipePreview from './components/RecipePreview';
+import ApexChart from './pages/Chart';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebase';
 import Header from './components/Header';
@@ -57,6 +58,7 @@ function App() {
                 <Route path="/create-recipe" element={user ? <Layout user={user}><CreateRecipe addRecipe={addRecipe} /></Layout> : <Navigate to="/login" />} />
                 <Route path="/recipe/:id" element={user ? <Layout user={user}><RecipeDetail recipes={recipes} /></Layout> : <Navigate to="/login" />} />
                 <Route path="/preview" element={user ? <Layout user={user}><RecipePreview /></Layout> : <Navigate to="/login" />} />
+                <Route path="/chart" element={user ? <Layout user={user}><ApexChart /></Layout> : <Navigate to="/login" />} /> {/* New Route */}
             </Routes>
         </div>
     );
