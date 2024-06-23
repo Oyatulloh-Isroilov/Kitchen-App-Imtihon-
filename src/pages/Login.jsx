@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../firebase'; 
+import { auth } from '../firebase';
 import '../styles/components.css';
-import videoBg from '../assets/videos/bgVideo.mp4';
+import videoBg from '../assets/videos/loginBg.mp4';
 import { Link, useNavigate } from 'react-router-dom';
 import google from '../assets/images/google.webp';
 
@@ -32,21 +32,23 @@ function Login() {
     };
 
     return (
-        <div className="login">
+        <div className="loginContainer">
             <video className='bgVideo' src={videoBg} autoPlay loop muted />
-            <div className="signupBar">
-                <h3 className='signupText'>Login</h3>
-                <div className="createAccInps">
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" placeholder='example@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                {error && <p className="error">{error}</p>}
-                <div className="signupButtons">
-                    <button className='loginBtn' onClick={handleLogin}>Login</button>
-                    <button className='loginGoogleBtn' onClick={handleGoogleLogin}><img className='googleIcon' src={google} alt="google icon" />Google</button>
-                    <Link to="/signup">I have no account yet</Link>
+            <div className="login"> 
+                <div className="loginBar">
+                    <h3 className='loginText'>Login</h3>
+                    <div className="loginAccInps">
+                        <input type="email" id="email" placeholder='example@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="password" id='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    {error && <p className="error">{error}</p>}
+                    <div className="loginButtons">
+                        <button className='loginBtn' onClick={handleLogin}>Login</button>
+                        <button className='loginGoogleBtn' onClick={handleGoogleLogin}><img className='googleIcon' src={google} alt="google icon" />Google</button>
+                        <div className="accNoHave">
+                            <span>You do not have an account?</span><Link to="/signup">Signup</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

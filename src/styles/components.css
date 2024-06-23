@@ -17,7 +17,6 @@ button {
 
 .createAccInps input {
   padding: 10px 20px;
-  border: 1.5px solid rgb(101, 38, 255);
   border-radius: 8px;
   outline: none;
   margin-bottom: 20px;
@@ -34,10 +33,23 @@ button {
 .signupBar {
   margin-left: auto;
   margin-right: auto;
-  width: 305px;
+  width: 400px;
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 35px 30px;
+  padding-bottom: 60px;
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.signupBar input {
+  outline: none;
+  border: none;
 }
 
 .loginBtn {
+  margin-bottom: 10px;
   background-image: url(../assets/images/signupBtn.avif);
 }
 
@@ -57,13 +69,6 @@ button {
   font-size: 15px;
 }
 
-.signupText {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 41px;
-  margin-top: 160px;
-}
-
 .signupBtn {
   outline: none;
   border: none;
@@ -74,19 +79,34 @@ button {
 .signupGoogleBtn {
   display: flex;
   gap: 5px;
-  width: 300px;
   justify-content: center;
   outline: none;
   border: none;
-  background-image: url(../assets//images//googleBtn.png);
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .login {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  position: relative;
+  width: 500px;
+  padding-bottom: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
+.loginBar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 440px;
+  color: #fff;
+  padding: 35px 30px;
+  padding-bottom: 60px;
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
 }
 
 .loginAccInps {
@@ -95,10 +115,21 @@ button {
 }
 
 .loginAccInps input {
-  padding: 10px 20px;
-  border: 1.5px solid rgb(101, 38, 255);
+  padding: 15px 30px;
   border-radius: 8px;
+  border: none;
   outline: none;
+  margin-bottom: 20px;
+  background: #30304b;
+  opacity: 0.7;
+}
+
+.signupText {
+  display: flex;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 41px;
+  color: #fff;
 }
 
 .bgVideo {
@@ -109,17 +140,20 @@ button {
   object-fit: cover;
 }
 
-.loginBar {
-  margin-left: auto;
-  margin-right: auto;
-  width: 305px;
+.accNoHave {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accNoHave a {
+  text-decoration: none;
 }
 
 .loginButtons {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  row-gap: 18px;
 }
 
 .loginButtons button {
@@ -132,10 +166,11 @@ button {
 }
 
 .loginText {
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 41px;
-  margin-top: 160px;
+  margin-top: 35px;
+  font-weight: 900;
+  margin-bottom: 25px;
 }
 
 .loginpBtn {
@@ -147,22 +182,22 @@ button {
 
 .loginGoogleBtn {
   display: flex;
+  background: transparent;
+  border: 1px solid;
+  gap: 5px;
+  justify-content: center;
   outline: none;
   border: none;
-  gap: 5px;
-  background-image: url(../assets/images/googleBtn.png);
-  width: 300px;
-  justify-content: center;
-}
-
-.loginButtons a,
-.signupButtons a {
   border-radius: 10px;
   padding: 14px 24px;
-  text-decoration: none;
-  background-image: url(../assets/images/accountHaveBtn.jpg);
   color: #fff;
-  text-align: center;
+  font-size: 15px;
+}
+
+.signupText {
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .home {
@@ -279,7 +314,7 @@ button {
   word-wrap: break-word;
   max-width: 100%;
   line-height: 1.2em;
-  height: 3.6em; 
+  height: 3.6em;
   font-size: 19px;
 }
 
@@ -547,7 +582,7 @@ button {
   margin-right: 10px;
 }
 
-.detailMethod h3{
+.detailMethod h3 {
   margin-bottom: 10px;
 }
 
@@ -565,7 +600,6 @@ button {
   margin-left: auto;
   border-radius: 7px;
 }
-
 
 .recipeImages span {
   display: flex;
@@ -629,11 +663,11 @@ button {
   border: none;
 }
 
-.createRecipeBtns .recipeBtnApply{
+.createRecipeBtns .recipeBtnApply {
   background: rgb(0, 181, 255);
 }
 
-.createRecipeBtns .recipeBtnPreviwe{
+.createRecipeBtns .recipeBtnPreviwe {
   background: rgb(0, 169, 110);
 }
 
