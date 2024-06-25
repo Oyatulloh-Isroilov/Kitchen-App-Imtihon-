@@ -11,7 +11,7 @@ function RecipeDetail({ recipes }) {
     }
 
     const handleBack = () => {
-        navigate(-1);   
+        navigate(-1);
     };
 
     return (
@@ -29,8 +29,11 @@ function RecipeDetail({ recipes }) {
                 <span>Ingredients:</span>
                 <ul className='detailIngredientsUl'>
                     {recipe.ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient.name} - ${ingredient.cost.toFixed(2)}</li>
+                        <li key={index}>
+                            {ingredient.name} - {ingredient.cost ? `$${ingredient.cost.toFixed(2)}` : 'Cost not available'}
+                        </li>
                     ))}
+
                 </ul>
             </div>
             <div className="detailCookingTime">
