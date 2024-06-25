@@ -683,5 +683,11 @@ tspan {
 
 .themeToggle {
   outline: none;
+  background: transparent;
   border: none;
+}
+
+.dark-mode {
+  color: #fff;
+  background: rgb(20, 16, 38);
 }

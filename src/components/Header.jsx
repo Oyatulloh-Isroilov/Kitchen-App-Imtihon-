@@ -12,7 +12,11 @@ function Header({ user }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        document.body.className = theme;
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
     }, [theme]);
 
     const toggleDropdown = () => {
