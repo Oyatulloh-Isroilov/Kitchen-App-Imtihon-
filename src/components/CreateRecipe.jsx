@@ -33,8 +33,8 @@ function CreateRecipe({ addRecipe }) {
     };
 
     const handleSave = () => {
-        if (!title || !cookingTime || !method || ingredients.length === 0 || images.length === 0 || !protein || !fat || !carbohydrates) {
-            setError('Please fill all fields and add at least one ingredient, one image, and nutrient information.');
+        if (!title || !cookingTime || !method || ingredients.length === 0 || images.length === 0) {
+            setError('Please fill all fields and add at least one ingredient and one image.');
             return;
         }
 
@@ -45,11 +45,6 @@ function CreateRecipe({ addRecipe }) {
             description: method,
             ingredients,
             images,
-            nutrients: {
-                protein: parseFloat(protein),
-                fat: parseFloat(fat),
-                carbohydrates: parseFloat(carbohydrates),
-            },
             createdTime: new Date().toISOString()
         };
 
@@ -58,7 +53,7 @@ function CreateRecipe({ addRecipe }) {
     };
 
     const handlePreview = () => {
-        navigate('/preview', { state: { images, ingredients, nutrients: { protein, fat, carbohydrates } } });
+        navigate('/preview', { state: { images, ingredients } });
     };
 
     return (
@@ -93,6 +88,13 @@ function CreateRecipe({ addRecipe }) {
                         placeholder='Enter ingredient name'
                         value={ingredientInput}
                         onChange={(e) => setIngredientInput(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        id="ingredientCost"
+                        placeholder='Enter ingredient cost'
+                        value={ingredientCost}
+                        onChange={(e) => setIngredientCost(e.target.value)}
                     />
                     <button className='addBtn' onClick={handleAddIngredient}>+</button>
                 </div>

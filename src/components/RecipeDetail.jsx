@@ -29,7 +29,7 @@ function RecipeDetail({ recipes }) {
                 <span>Ingredients:</span>
                 <ul className='detailIngredientsUl'>
                     {recipe.ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
+                        <li key={index}>{ingredient.name} - ${ingredient.cost.toFixed(2)}</li>
                     ))}
                 </ul>
             </div>
